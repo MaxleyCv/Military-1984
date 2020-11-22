@@ -23,6 +23,8 @@ function App() {
       <Switch>
         <Route path="/weapons">
           <Base />
+          <Footer />
+
         </Route>
         <Route path="/war">
           <Brigade />

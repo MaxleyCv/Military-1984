@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const BaseContainer = styled.div`
-    height: fit-content;
-    margin-top:0;
+    height: 300vh;
+    margin-top:0px;
     margin-bottom: 10px;
-    position: relative;
+    position: static;
+    width: 100%;
+    top: 0;
 
 `

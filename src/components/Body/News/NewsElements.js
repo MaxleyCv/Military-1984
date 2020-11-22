@@ -53,8 +53,9 @@ export const NewsArticle = styled.div`
     flex-direction: column;
     align-items: center;
     height: 27rem;
-    width: 25rem;
+    width: 29rem;
     border: 2px solid rgba(255, 226, 203, 0.288);;
+    padding: 1rem;
 `
 
 export const NewsArticleHeading = styled.p`

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { HeroContainer, WeaponGrid } from "./HeroComponents";
+import { HeroContainer, WeaponGrid, WelcomeBar } from "./HeroComponents";
+import Settings from "./Settings";
 import WeaponFrame from './WeaponFrame'
 
 const Hero = () => {
@@ -15,6 +16,7 @@ const Hero = () => {
     ]);
     return (
         <HeroContainer>
+            <WelcomeBar>FORM YOUR BRIGADE</WelcomeBar>
             <WeaponGrid>
                 {weapons.map(
                     weapon => (

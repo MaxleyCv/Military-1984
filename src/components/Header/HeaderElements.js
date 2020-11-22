@@ -17,7 +17,7 @@ export const VideoPart = styled.video`
 export const WelcomeParagraph = styled.div`
     display: flex;
     position: relative;
-    top: 13vh;
+    top: 20vh;
     /* color: silver; */
     flex-direction: column;
     justify-content: center;

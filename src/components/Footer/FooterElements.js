@@ -4,6 +4,8 @@ export const FooterContainer = styled.div`
     margin-top: 0;
     width: 100%;
     height: 30vh;
+    position: relative;
+    top: 15vh;
 `
 
 export const FooterNav = styled.nav`
@@ -21,7 +23,7 @@ export const FooterLogo = styled.img`
     border: transparent;
 `
 export const FooterLink = styled.a`
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: silver;
     opacity: 0.7;
     display: flex;
@@ -38,10 +40,12 @@ export const Ministries = styled.div`
 
 export const MinistryName = styled.span`
     margin-left: 1rem;
+ 
 `
 
 export const Name = styled.p`
     font-size: 2rem;
+    opacity: 0.4;
 `
 
 export function hover(element){
