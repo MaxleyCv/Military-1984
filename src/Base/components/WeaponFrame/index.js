@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 import {Frame, WeaponImage, WeaponParameter, ParamName, ParamVal, Buttons, FrameButton, hover, dehover} from './FrameStyles'
 
 const WeaponFrame = (props) => {
@@ -31,7 +32,9 @@ const WeaponFrame = (props) => {
                 <ParamVal>{props.count} </ParamVal>
             </WeaponParameter>
             <Buttons>
+                <Link to={"/weapons/" + props.id}>  
                 <FrameButton onMouseOver={hover} onMouseLeave={dehover}>Take</FrameButton>
+                </Link>
                 <FrameButton onMouseOver={hover} onMouseLeave={dehover}>Details</FrameButton>
             </Buttons>
         </Frame>

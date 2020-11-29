@@ -3,6 +3,7 @@ import { HeroContainer, WeaponGrid, WelcomeBar } from "./HeroComponents";
 import Settings from "./Settings";
 import WeaponFrame from './WeaponFrame'
 
+
 const Hero = () => {
 
     const[weapons] = useState([

@@ -24,7 +24,6 @@ function App() {
         <Route path="/weapons">
           <Base />
           <Footer />
-
         </Route>
         <Route path="/war">
           <Brigade />
