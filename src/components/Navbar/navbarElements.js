@@ -30,7 +30,7 @@ export const NavbarContainer = styled.div`
 `
 
 export const NavbarCoat = styled.img`
-    content: url('images/coatOfArms.png');
+    content: url('../../images/coatOfArms.png');
     height: 5rem;
     padding-right: 100px;
     margin-left: 5rem;

@@ -34,8 +34,9 @@ export const SoldierInput = styled.input`
 `
 
 export const SoldierCheckbox = styled.input`
-    width: 1.5rem;
+    width: 10rem;
     height: 1.5rem;
+    font-size: 1.5rem;
     opacity: 0.4;
     margin-left: 1rem;
 `

@@ -13,6 +13,8 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'
 import Home from './Home';
+import WeaponSite from './WeaponSite';
+import getAll from './armGetter';
   
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
+      <Route path="/weapons/:id">
+          <WeaponSite items={getAll()}/>
+      </Route>
         <Route path="/weapons">
           <Base />
           <Footer />

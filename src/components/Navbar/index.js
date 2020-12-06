@@ -12,9 +12,7 @@ const Navbar = () => {
     return (
         <Nav>
             <NavbarContainer>
-                <Link to="/" style={{ textDecoration: 'none' }}>
-                <NavbarCoat> 
-                </NavbarCoat> </Link>
+                <Link to="/" style={{ textDecoration: 'none' }}> <NavbarCoat/> </Link>
                 <NavbarLinks>
                     <Link to="/weapons" style={{ textDecoration: 'none' }}> <NavbarLink onMouseOver={hover} onMouseLeave={dehover}> Weapons </NavbarLink></Link>
                     <Link to="/war" style={{ textDecoration: 'none' }}> <NavbarLink onMouseOver={hover} onMouseLeave={dehover}> Brigade</NavbarLink> </Link> 

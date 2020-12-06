@@ -4,8 +4,8 @@ export const FooterContainer = styled.div`
     margin-top: 0;
     width: 100%;
     height: 30vh;
-    position: relative;
-    top: 15vh;
+    margin-top: 1vh;
+    bottom: 0px;
 `
 
 export const FooterNav = styled.nav`

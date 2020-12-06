@@ -27,3 +27,13 @@ export const WelcomeBar = styled.p`
     margin-bottom: 6vh;
 `
 
+export const HeroButton = styled.button`
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: silver;
+    align-self: center;
+    width: 10rem;
+    height: 3rem;
+    margin-left: 40%;
+
+`
