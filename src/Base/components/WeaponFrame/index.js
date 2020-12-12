@@ -33,9 +33,9 @@ const WeaponFrame = (props) => {
             </WeaponParameter>
             <Buttons>
                 <Link to={"/weapons/" + props.id}>  
-                <FrameButton onMouseOver={hover} onMouseLeave={dehover}>Take</FrameButton>
-                </Link>
                 <FrameButton onMouseOver={hover} onMouseLeave={dehover}>Details</FrameButton>
+                </Link>
+                <FrameButton onMouseOver={hover} onMouseLeave={dehover}>Take</FrameButton>
             </Buttons>
         </Frame>
     )

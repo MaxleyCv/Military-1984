@@ -3,18 +3,52 @@ import getAll from "../../armGetter";
 import { HeroContainer, WeaponGrid, WelcomeBar, HeroButton } from "./HeroComponents";
 import WeaponFrame from './WeaponFrame'
 
+// function a(){
+// const [veapon, setVeapon] = useState([]);
+// const [loading, setLoading] = useState(false);
+
+//     useEffect(() => {
+//         const fetchMovies = async () => {
+//           const res = await axios.get('http://127.0.0.1:5000/arms')
+//           setVeapon(res.data);
+//           console.log('fom nested')
+//           setLoading(true);
+//         }
+//         fetchMovies();
+//       }, []);  
+//     }
+
+const Hero = (props) => {
 
 
-const Hero = () => {
 
-    const[items, setItems] = useState([getAll()[0], getAll()[1]]);
-    function showMore(){
-        setItems(getAll())
-    }
-    function showLess(){
-        setItems([getAll()[0], getAll()[1]])
-    }
+    const[items, setItems] = useState(props.items);
+    // function showMore(){
+    //     setItems(props.items)
+    //     if (props.filterName){
+    //         setItems(items.filter((weapon) => {return weapon.serial === props.filterName}))
+    //     }
     
+    //     if (props.filterCount){
+    //         setItems(items.filter((weapon) => {return weapon.count <= props.filterCount}))
+    //     }
+    // }
+
+    // function filterBySerial(serial){
+    //     setItems(getAll().filter((weapon) => {return weapon.serial == serial}))
+    // }
+
+    // function showLess(){
+    //     setItems([props.items[0], props.items[1]])
+    // }
+    
+    // if (props.filterName){
+    //     setItems(items.filter((weapon) => {return weapon.serial === props.filterName}))
+    // }
+
+    // if (props.filterCount){
+    //     setItems(items.filter((weapon) => {return weapon.count <= props.filterCount}))
+    // }
     console.log(items)
 
     return (
@@ -27,9 +61,9 @@ const Hero = () => {
                     )
                 )}
             </WeaponGrid>
-            <HeroButton onClick={showMore}>
+            {/* <HeroButton onClick={showMore}> 
                 Show more
-            </HeroButton>
+            </HeroButton> */}
         </HeroContainer>
     )
 }
