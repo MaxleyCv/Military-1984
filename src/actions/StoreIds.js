@@ -1,6 +1,6 @@
-export const del = (id) => {
+export const del = (element) => {
     return {
-        action: 'DEL',
-        element: id
+        type: 'DEL',
+        element: element
     }
 }

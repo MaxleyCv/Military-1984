@@ -1,6 +1,6 @@
-export const add = (id) => {
+export const add = (element) => {
     return {
-        action: 'ADD',
-        element: id
+        type: 'ADD',
+        element: element
     }
 }

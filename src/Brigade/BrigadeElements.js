@@ -1,8 +1,9 @@
-import React, { forwardRef } from 'react'
-import { Link } from 'react-router-dom'
+import React, { forwardRef } from 'react';
+import {useDispatch} from 'react-redux';
 import {Frame, WeaponImage, WeaponParameter, ParamName, ParamVal, Buttons, FrameButton, hover, dehover} from './FrameStyles'
-import { useDispatch } from "react-redux";
-import { add } from '../../../actions/SoldierCounter';
+import {add } from '../actions/SoldierCounter'
+import {del } from '../actions/StoreIds'
+
 
 const WeaponFrame = (props) => {
     const dispatch = useDispatch();
@@ -31,23 +32,29 @@ const WeaponFrame = (props) => {
                 <ParamVal>{props.type} </ParamVal>
             </WeaponParameter>
             <WeaponParameter>
-                <ParamName>We have </ParamName>
+                <ParamName>You have </ParamName>
                 <ParamVal>{props.count} </ParamVal>
             </WeaponParameter>
             <Buttons>
-                <Link to={"/weapons/" + props.id}>  
-                <FrameButton onMouseOver={hover} onMouseLeave={dehover}>Details</FrameButton>
-                </Link>
                 <FrameButton onMouseOver={hover} onMouseLeave={dehover} onClick={() => {
-                    dispatch(add({
-                        id: props.id,
-                        count: 1,
-                        people: props.people,
-                        type: props.type,
-                        serial: props.serial,
-                        country: props.country
-                    }))
-                }}>Take</FrameButton>
+                                        dispatch(add({
+                                            id: props.id,
+                                            count: 1,
+                                            people: props.people,
+                                            type: props.type,
+                                            serial: props.serial,
+                                            country: props.country
+                                        }))
+                }}>+</FrameButton>
+                <FrameButton onMouseOver={hover} onMouseLeave={dehover} onClick={() => {
+                                        dispatch(del({
+                                            id: props.id,
+                                            count: 1,
+                                            people: props.people,
+                                            type: props.type,
+                                            serial: props.serial,
+                                            country: props.country
+                                        }))}}>-</FrameButton>
             </Buttons>
         </Frame>
     )
