@@ -1,0 +1,13 @@
+.bal{
+    font-style: normal;
+    color: wheat;
+}
+
+.InputForm{
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+}

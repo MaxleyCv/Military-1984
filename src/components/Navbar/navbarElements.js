@@ -44,7 +44,7 @@ export const NavbarLinks = styled.div`
     margin-right: 5rem;
 `
 
-export const NavbarLink = styled.a` 
+export const NavbarLink = styled.span` 
     font-size: 1.6rem;
     color: silver;
     opacity: 0.4;

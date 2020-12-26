@@ -1,31 +1,12 @@
 import React from 'react'
 import { InputField, InputForm, MainSection, SubmitButton, TextInput } from './CheckoutElements'
+import Checkout1 from './components/Chekof'
 import MainForm from './components/MainForm'
 
 const Checkout = () => {
     return (
         <MainSection>
-            {/* <InputForm>
-                <InputField>
-                <TextInput type="text"></TextInput>
-                </InputField>
-                <InputField>
-                <TextInput type="text"></TextInput>
-                </InputField>
-                <InputField>
-                <TextInput type="text"></TextInput>
-                </InputField>
-                <InputField>
-                <TextInput type="text"></TextInput>
-                </InputField>
-                <InputField>
-                <TextInput type="text"></TextInput>
-                </InputField>
-                <div>
-                <SubmitButton type="submit" />
-                </div>
-            </InputForm> */}
-            <MainForm></MainForm>
+            <MainForm/>
         </MainSection>
     )
 }

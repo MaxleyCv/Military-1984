@@ -43,3 +43,6 @@ export const SubmitButton = styled.button`
     cursor: pointer;
 `
 
+export const ErrMessage = styled.div`
+    color: wheat;
+`

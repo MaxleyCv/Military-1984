@@ -19,6 +19,7 @@ const storeReducer = (state = [], action) => {
             else {state.push(action.element);}
             
             return state;
+
         case 'DEL':
             let isCount = 1;
             state.forEach(el => {
