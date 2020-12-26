@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Home from "./Home";
 import WeaponSite from "./WeaponSite";
 import getAll from "./armGetter";
+import Checkout from "./checkout";
 
 
 
@@ -27,6 +28,9 @@ function App() {
             <Route path="/weapons">
               <Base />
               <Footer />
+            </Route>
+            <Route path="/checkout">
+              <Checkout/>
             </Route>
             <Route path="/war">
               <Brigade />
