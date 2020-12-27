@@ -38,6 +38,8 @@ const storeReducer = (state = [], action) => {
                 )
                 return state;
             }
+        case 'CLEAR':
+            return [];
         default:
             return state;
     }

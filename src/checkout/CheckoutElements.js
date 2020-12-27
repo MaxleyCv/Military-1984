@@ -44,5 +44,6 @@ export const SubmitButton = styled.button`
 `
 
 export const ErrMessage = styled.div`
-    color: wheat;
+    color: pink;
+    font-size: 0.7rem;
 `

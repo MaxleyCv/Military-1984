@@ -3,7 +3,8 @@ import { Formik, ErrorMessage, useField, Form } from 'formik';
 import * as Yup from 'yup';
 import { TextInput, SubmitButton, InputForm, ErrMessage } from '../CheckoutElements';
 import './MainForm.css';
-import {useState} from 'react';
+import {useDispatch} from 'react-redux';
+import { clear } from '../../actions/ClearAction';
 
 
 const SchemValObjYupYux = Yup.object({
@@ -23,6 +24,7 @@ const SchemValObjYupYux = Yup.object({
 });
 
 const MainForm = () => {
+  const dispatch = useDispatch();
     return (
         <Formik
         initialValues={{ divisionName: '', personalId: '', email: '', keyValidation: '', accountNum: '' }}
@@ -32,6 +34,7 @@ const MainForm = () => {
             alert(JSON.stringify(values, null, 2));
             resetForm();
             setSubmitting(false);
+            dispatch(clear());
           }, 3000)
         }}
       >
@@ -61,35 +64,6 @@ const CustomTextInput = ({ label, ...props }) => {
     </>
   );
 };  
-
-const CustomCheckBox = ({ children, ...props }) => {
-  const [field, meta] = useField(props, "checkbox");
-
-  return (
-    <>
-      <label>
-        <input type="checkbox" {...field} {...props}></input>
-        {children}
-      </label>
-      <input>
-        {field} {props}
-      </input>
-      {meta.touched && meta.error ? <div className="bal"> {meta.error}</div> : null}
-    </>
-  );
-};
-
-const CustomSelect = ({ label, ...props }) => {
-  const [field, meta] = useField(props);
-
-  return (
-    <>
-      <label htmlFor={props.id || props.name}>{label}</label>
-      <select {...field} {...props}></select>
-      {meta.touched && meta.error ? <div> {meta.error}</div> : null}
-    </>
-  );
-};
 
 
 export default MainForm;

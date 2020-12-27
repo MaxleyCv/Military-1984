@@ -59,7 +59,7 @@ export const NewP = styled.p`
     font-size: 2rem;
     opacity: 0.4;
     margin-left: 3vw;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 `
 
 

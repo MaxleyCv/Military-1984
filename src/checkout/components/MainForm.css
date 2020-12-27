@@ -1,13 +1,24 @@
 .bal{
     font-style: normal;
     color: wheat;
+    font-size: 1.5rem;
+    opacity: 0.6;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
 }
 
 .InputForm{
     display: flex;
     flex-direction: column;
-    height: 20rem;
+    height: 11rem;
     width: 100vw;
+    position: absolute;
+    top: 5rem;
+    margin-top: 0rem;
     align-items: center;
     justify-content: space-around;
+}
+
+.topdiv{
+    margin-top: 15rem;
 }
