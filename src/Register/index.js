@@ -32,10 +32,19 @@ const RegisterPage = () => {
         validationSchema={SchemValObjYupYux}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
-            localStorage.setItem('accounts', [])
-            alert(values);
+            let oldUsers = JSON.parse(localStorage.getItem('users'));
+            if (oldUsers == null){
+              oldUsers = [];
+            }
+            console.log(oldUsers)
+            oldUsers.push(values)
+            localStorage.setItem('users', JSON.stringify(oldUsers));
+            alert("Success");
             resetForm();
-            localStorage.setItem('isLogged', true)
+            localStorage.setItem('current',JSON.stringify(values))
+            localStorage.setItem('isLogged', 'true')
+            console.log(localStorage.getItem('users'));
+
             history.push("/");
             setSubmitting(false);
           }, 3000)

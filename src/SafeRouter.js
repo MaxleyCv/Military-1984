@@ -6,12 +6,10 @@ const SafeRouter = ({
     ...rest
 }) => {
     let logged = localStorage.getItem('isLogged');
-
     return (
         <Route
         {...rest} render= { () => {
-            if(logged) {
-                console.log(logged);
+            if(logged == 'true') {
                 return <Component />;
             }
             else{

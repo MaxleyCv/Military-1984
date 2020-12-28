@@ -39,7 +39,7 @@ function App() {
             <SafeRouter path="/war" component={Brigade}/>
             <SafeRouter path="/" component={Home}/>
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </Router>
     </div>
   );

@@ -20,7 +20,7 @@ const SchemValObjYupYux = Yup.object({
 });
 
 const LoginPage = () => {
-    localStorage.setItem('isLogged', false);
+  localStorage.setItem('isLogged', false);
   let history = useHistory();
     return ( <MainDiv>
         <Formik
@@ -28,11 +28,22 @@ const LoginPage = () => {
         validationSchema={SchemValObjYupYux}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
-            localStorage.setItem('isLogged', true)
-            alert("Successful login");
-            resetForm();
+            let users = JSON.parse(localStorage.getItem('users'))
+            if (users == null){
+              users = [];
+            }
+            let selected_users =  users.filter((us) => {if (us.Surname == values.Name && us.Password == values.Password) return true })
+            if (selected_users[0]){
+              localStorage.setItem('isLogged', true);
+              alert("Successful login");
+            }
+            else {
+              alert("wrong password or nickname")
+            }
+            alert(localStorage.getItem('isLogged'));
             history.push("/");
             setSubmitting(false);
+            resetForm();
           }, 3000)
         }}
       >

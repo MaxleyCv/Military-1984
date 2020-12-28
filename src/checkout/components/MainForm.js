@@ -27,9 +27,10 @@ const SchemValObjYupYux = Yup.object({
 const MainForm = () => {
   const dispatch = useDispatch();
   let history = useHistory()
+  let currentUser = JSON.parse(localStorage.getItem('current'))
     return (
         <Formik
-        initialValues={{ divisionName: '', personalId: '', email: '', keyValidation: '', accountNum: '' }}
+        initialValues={{ divisionName: '', personalId: '', email: currentUser.email, keyValidation: '', accountNum: '' }}
         validationSchema={SchemValObjYupYux}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
