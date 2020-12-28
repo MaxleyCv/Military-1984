@@ -5,6 +5,7 @@ import { TextInput, SubmitButton, InputForm, ErrMessage } from '../CheckoutEleme
 import './MainForm.css';
 import {useDispatch} from 'react-redux';
 import { clear } from '../../actions/ClearAction';
+import { useHistory } from 'react-router-dom';
 
 
 const SchemValObjYupYux = Yup.object({
@@ -25,6 +26,7 @@ const SchemValObjYupYux = Yup.object({
 
 const MainForm = () => {
   const dispatch = useDispatch();
+  let history = useHistory()
     return (
         <Formik
         initialValues={{ divisionName: '', personalId: '', email: '', keyValidation: '', accountNum: '' }}
@@ -33,6 +35,7 @@ const MainForm = () => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
             resetForm();
+            history.push("checkout/success");
             setSubmitting(false);
             dispatch(clear());
           }, 3000)
@@ -45,7 +48,7 @@ const MainForm = () => {
           <CustomTextInput label="Email Address" name="email" type="email"></CustomTextInput>
           <CustomTextInput label="Personal Account" name="accountNum" type="number" ></CustomTextInput>
           <CustomTextInput label="Validation Key" name="keyValidation" type="password"></CustomTextInput>
-          <SubmitButton type="submit"> {props.isSubmitting ? "submiting...." : "Submit"}</SubmitButton>
+          <SubmitButton type="submit"> {props.isSubmitting ? "Submiting...." : "Submit"}</SubmitButton>
         </Form>)}
       </Formik>
     )

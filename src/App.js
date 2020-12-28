@@ -11,6 +11,10 @@ import Home from "./Home";
 import WeaponSite from "./WeaponSite";
 import getAll from "./armGetter";
 import Checkout from "./checkout";
+import Success from "./Success/Success";
+import RegisterPage from "./Register";
+import LoginPage from "./Login";
+import SafeRouter from "./SafeRouter";
 
 
 
@@ -22,25 +26,20 @@ function App() {
         <Router>
           <Navbar />
           <Switch>
-            <Route path="/weapons/:id">
-              <WeaponSite items={getAll()} />
+            <Route path="/register">
+              <RegisterPage />
             </Route>
-            <Route path="/weapons">
-              <Base />
-              <Footer />
+            <Route path="/login">
+              <LoginPage />
             </Route>
-            <Route path="/checkout">
-              <Checkout/>
-            </Route>
-            <Route path="/war">
-              <Brigade />
-              <Footer />
-            </Route>
-            <Route path="/">
-              <Home />
-              <Footer />
-            </Route>
+            <SafeRouter path="/weapons/:id" component={WeaponSite}/>
+            <SafeRouter path="/weapons" component={Base}/>
+            <SafeRouter path="/checkout/success" component={Success} />
+            <SafeRouter path="/checkout" component={Checkout} />
+            <SafeRouter path="/war" component={Brigade}/>
+            <SafeRouter path="/" component={Home}/>
           </Switch>
+          <Footer />
         </Router>
     </div>
   );
